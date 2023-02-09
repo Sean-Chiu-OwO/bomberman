@@ -48,9 +48,10 @@
             // 
             this.LabStartup.AutoSize = true;
             this.LabStartup.Font = new System.Drawing.Font("Microsoft JhengHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabStartup.Location = new System.Drawing.Point(142, 306);
+            this.LabStartup.Location = new System.Drawing.Point(207, 415);
+            this.LabStartup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabStartup.Name = "LabStartup";
-            this.LabStartup.Size = new System.Drawing.Size(498, 64);
+            this.LabStartup.Size = new System.Drawing.Size(399, 50);
             this.LabStartup.TabIndex = 0;
             this.LabStartup.Text = "Press ENTER to start";
             // 
@@ -82,9 +83,10 @@
             // 
             this.LabGameover.AutoSize = true;
             this.LabGameover.Font = new System.Drawing.Font("Microsoft JhengHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabGameover.Location = new System.Drawing.Point(230, 127);
+            this.LabGameover.Location = new System.Drawing.Point(276, 273);
+            this.LabGameover.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabGameover.Name = "LabGameover";
-            this.LabGameover.Size = new System.Drawing.Size(292, 64);
+            this.LabGameover.Size = new System.Drawing.Size(236, 50);
             this.LabGameover.TabIndex = 1;
             this.LabGameover.Text = "Game Over";
             this.LabGameover.Visible = false;
@@ -93,20 +95,22 @@
             // 
             this.LabPoint.AutoSize = true;
             this.LabPoint.Font = new System.Drawing.Font("Microsoft JhengHei UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LabPoint.Location = new System.Drawing.Point(196, 484);
+            this.LabPoint.Location = new System.Drawing.Point(843, 127);
+            this.LabPoint.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabPoint.Name = "LabPoint";
-            this.LabPoint.Size = new System.Drawing.Size(324, 64);
+            this.LabPoint.Size = new System.Drawing.Size(256, 50);
             this.LabPoint.TabIndex = 3;
             this.LabPoint.Text = "Your points :";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 783);
+            this.ClientSize = new System.Drawing.Size(1234, 791);
             this.Controls.Add(this.LabPoint);
             this.Controls.Add(this.LabGameover);
             this.Controls.Add(this.LabStartup);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Bomberman";
             this.Load += new System.EventHandler(this.Bomberman_Load);

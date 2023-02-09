@@ -91,6 +91,15 @@ namespace bomberman.Properties {
         }
         
         /// <summary>
+        ///   查詢類似 System.IO.MemoryStream 的類型 System.IO.UnmanagedMemoryStream 當地語系化資源。
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream explode {
+            get {
+                return ResourceManager.GetStream("explode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
         /// </summary>
         internal static System.Drawing.Bitmap explosion {
@@ -120,7 +129,7 @@ namespace bomberman.Properties {
         ///W N W D W N W N W N W
         ///W N N N N N N N N N W
         ///W D W N W N W N W N W
-        ///W N N N N D N N D N W
+        ///W N N N N N N N D N W
         ///W W W W W W W W W W W 的當地語系化字串。
         /// </summary>
         internal static string level1 {
@@ -135,6 +144,46 @@ namespace bomberman.Properties {
         internal static System.Drawing.Bitmap player {
             get {
                 object obj = ResourceManager.GetObject("player", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap player_down {
+            get {
+                object obj = ResourceManager.GetObject("player_down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap player_left {
+            get {
+                object obj = ResourceManager.GetObject("player_left", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap player_right {
+            get {
+                object obj = ResourceManager.GetObject("player_right", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+        /// </summary>
+        internal static System.Drawing.Bitmap player_up {
+            get {
+                object obj = ResourceManager.GetObject("player_up", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
