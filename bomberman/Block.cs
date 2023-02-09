@@ -9,7 +9,7 @@ namespace bomberman
 {
     internal class Block    //場景方塊
     {
-        public static readonly int BlockHeight = 70, BlockWidth = 70;
+        public const int BlockHeight = 70, BlockWidth = 70;
         public PictureBox boxBlock = new PictureBox();
 
         public Block()

@@ -10,9 +10,9 @@ namespace bomberman
 {
     internal class Bomb //炸彈
     {
-        private static readonly int BombHeight = 70, BombWidth = 70;
+        private const int BombHeight = 70, BombWidth = 70;
         public PictureBox boxBomb = new PictureBox();
-        public static readonly int fuze = 3;    //炸彈引信
+        public const int fuze = 3;    //炸彈引信
         public int bombX, bombY;
 
         public Bomb() 

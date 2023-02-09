@@ -9,9 +9,9 @@ namespace bomberman
 {
     internal class Explosion    //爆炸
     {
-        public static readonly int ExplosionHeight = 70, ExplosionWidth = 70;
+        public const int ExplosionHeight = 70, ExplosionWidth = 70;
         public PictureBox boxExplosion = new PictureBox();
-        public static readonly int duration = 1;    //爆炸持續時間
+        public const int duration = 1;    //爆炸持續時間
 
         public Explosion()
         {

@@ -10,7 +10,7 @@ namespace bomberman
 {
     internal class Creature //生物
     {
-        public static readonly int CreatureHeight = 70, CreatureWidth = 70;
+        public const int CreatureHeight = 70, CreatureWidth = 70;
         public int Speed;   //生物移動速度
         public PictureBox boxCreature = new PictureBox();
         public PictureBox hitbox = new PictureBox();

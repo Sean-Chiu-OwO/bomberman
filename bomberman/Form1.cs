@@ -41,6 +41,8 @@ namespace bomberman
         {
             this.KeyPreview = true;
 
+            this.Size = new Size(1250, 830);
+
             this.Controls.Add(player.boxCreature);  //新增玩家
             this.Controls.Add(ai.boxCreature);      //新增AI
             this.Controls.Add(PlayerBomb.boxBomb);  //新增玩家炸彈
@@ -61,9 +63,9 @@ namespace bomberman
 
         private void StartGame()
         {
-            start = true;       //將遊戲狀態設為"開始"
+            start = true;   //將遊戲狀態設為"開始"
             Init();
-            MapLoader(1);       //讀取地圖資訊(Level1.txt)
+            MapLoader(1);   //讀取地圖資訊(Level1.txt)
             timeMain.Start();
             timeAI.Start();
         }
@@ -72,8 +74,7 @@ namespace bomberman
         {
             //隱藏所有Label
             LabStartup.Visible = false;
-            LabGameover.Visible = false;           
-            LabPoint.Visible = false;           
+            LabGameover.Visible = false;
 
             //初始化
             Player_BombPlaced = false;
@@ -138,7 +139,7 @@ namespace bomberman
             LabStartup.Visible = true;
 
             LabPoint.Text = "Your points : " + point;   //將分數加在Label上
-            LabPoint.Visible = true;         
+            LabPoint.Visible = true;
         }
 
         private void MapLoader(int level) //讀取關卡
@@ -252,10 +253,10 @@ namespace bomberman
         public bool CollisionCheck(PictureBox box, string tag)//判斷是否碰撞到牆壁
         {
             //列舉出form中所有Tag為tag的所有Picturebox
-            foreach (PictureBox picturebox in 
+            foreach (PictureBox picturebox in
                 this.Controls.OfType<PictureBox>()
                 .Where(pb => !(pb.Tag == null) && pb.Tag.ToString() == tag))
-            {     
+            {
                 if (box.Bounds.IntersectsWith(picturebox.Bounds))  //判斷兩者是否重疊
                 {
                     return true;//如重疊則回傳ture
@@ -336,7 +337,10 @@ namespace bomberman
                 step = 0;       //步數歸零
                 finish = true;  //將狀態設為"已動完完整一格"
 
-                ai.Spawn(ai.hitbox.Left, ai.hitbox.Top);    //生成AI
+                if (start == true)
+                {
+                    ai.Spawn(ai.hitbox.Left, ai.hitbox.Top);    //生成AI
+                }
             }
 
             //檢查玩家當下是否在炸彈上(用來解決放置炸彈當下無法移動的問題)
@@ -370,7 +374,7 @@ namespace bomberman
                     picturebox.Image = Properties.Resources.grass;
                     picturebox.Tag = "grass";
                 }
-            }            
+            }
         }
 
         private void timeBomb_Player_Tick(object sender, EventArgs e)
